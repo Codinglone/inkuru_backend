@@ -17,8 +17,14 @@ fastify.register(require('@fastify/swagger'), {
     }
 })
 
-AppDataSource.initialize().then(async () => {
+fastify.register(require('./routes/blogs.routes'),{prefix:'api/v1'})
+    const start = async () => {
+        try {
+          await fastify.listen({ port: PORT })
+        } catch (err) {
+          fastify.log.error(err)
+          process.exit(1)
+        }
+      }
+      start()
 
-   
-
-}).catch(error => console.log(error))
