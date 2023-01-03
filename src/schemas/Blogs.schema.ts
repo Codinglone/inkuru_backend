@@ -7,6 +7,7 @@ export const blogsSchema = T.Object({
 })
 
 export const getBlogsSchema = T.Object({
+    id: T.Number(),
     title: T.String(),
     body: T.String(),
     createdOn: T.String(),
