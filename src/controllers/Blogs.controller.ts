@@ -9,4 +9,13 @@ import { BlogsModel } from "../models/Blogs.model";
     }
 }
 
-export {postBlogController}
+  const getBlogsController = async(req, reply) => {
+    try {
+        const response = await BlogsModel.getBlogs()
+        reply.code(200).send(response);
+    } catch (error) {
+        reply.code(400).send(error)
+    }
+  }
+
+export {postBlogController, getBlogsController}
