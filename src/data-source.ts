@@ -1,6 +1,5 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm"
-import { User} from "./entity/User"
 import { Blogs } from "./entity/Blogs"
 
 export const AppDataSource = new DataSource({
@@ -12,7 +11,7 @@ export const AppDataSource = new DataSource({
     database: "inkuru",
     synchronize: true,
     logging: false,
-    entities: [User, Blogs],
+    entities: [Blogs],
     migrations: [],
     subscribers: [],
 })

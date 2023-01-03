@@ -6,11 +6,18 @@ export const blogsSchema = T.Object({
     body: T.String(),
 })
 
+export const getBlogsSchema = T.Object({
+    title: T.String(),
+    body: T.String(),
+    createdOn: T.String(),
+    updatedOn: T.String()
+})
+
 export const postBlogOpts = {
     schema: {
         body: T.Strict(blogsSchema),
         response: {
-            201: blogsSchema
+            201: getBlogsSchema
         }
     }, 
     handler: postBlogController

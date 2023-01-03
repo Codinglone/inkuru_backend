@@ -10,12 +10,12 @@ export class Blogs {
     @Column()
     title: string 
 
-    @Column({type: 'text'})
+    @Column()
     body: string 
 
     @CreateDateColumn({type: Date})
     createdOn: Date 
 
     @UpdateDateColumn({type: Date})
-    deletedOn: Date
+    updatedOn: Date
 }

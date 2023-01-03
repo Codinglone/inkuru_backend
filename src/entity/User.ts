@@ -21,13 +21,13 @@ export class User {
     @Column()
     role: string
 
-    @Column({type: Date})
+    @CreateDateColumn({type: Date})
     createdOn: Date 
 
-    @Column({type: Date})
+    @DeleteDateColumn({type: Date})
     deletedOn: Date
 
-    @Column({type: Date})
+    @UpdateDateColumn({type: Date})
     updatedOn: Date
 
 }

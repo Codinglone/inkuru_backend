@@ -1,6 +1,6 @@
+import { AppDataSource } from "../data-source";
 import { Blogs } from './../entity/Blogs';
 import { blogInterface } from "../utils/blogInterface";
-import { AppDataSource } from "../data-source";
 
 const blogRepo = AppDataSource.getRepository(Blogs)
 export class BlogsModel {
