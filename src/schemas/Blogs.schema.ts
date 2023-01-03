@@ -1,5 +1,5 @@
 import { Type as T } from "@sinclair/typebox";
-import {postBlogController} from "../controllers/Blogs.controller"
+import {postBlogController} from "../controllers/Blogs.controller";
 
 export const blogsSchema = T.Object({
     title: T.String(),
