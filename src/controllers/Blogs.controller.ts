@@ -18,4 +18,13 @@ import { BlogsModel } from "../models/Blogs.model";
     }
   }
 
+  const getSingleBlogController = async(req, reply) => {
+    try {
+        const response = await BlogsModel.getSingleBlog(req.params.id);
+        reply.code(200).send(response);
+    } catch (error) {
+        reply.code(400).send(error)
+    }
+  }
+
 export {postBlogController, getBlogsController}
