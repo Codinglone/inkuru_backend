@@ -1,5 +1,5 @@
 import { Type as T } from "@sinclair/typebox";
-import {postBlogController, getBlogsController} from "../controllers/Blogs.controller";
+import {postBlogController, getBlogsController, getSingleBlogController} from "../controllers/Blogs.controller";
 
 export const blogsSchema = T.Object({
     title: T.String(),
@@ -31,4 +31,13 @@ export const getBlogOpts = {
         }
     },
     handler: getBlogsController
+}
+
+export const getSingleBlogOpts = {
+    schema: {
+        response: {
+            200: getBlogsSchema
+        }
+    },
+    handler: getSingleBlogController
 }

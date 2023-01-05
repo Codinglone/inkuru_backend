@@ -27,4 +27,4 @@ import { BlogsModel } from "../models/Blogs.model";
     }
   }
 
-export {postBlogController, getBlogsController}
+export {postBlogController, getBlogsController, getSingleBlogController}
