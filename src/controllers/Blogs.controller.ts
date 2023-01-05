@@ -27,4 +27,12 @@ import { BlogsModel } from "../models/Blogs.model";
     }
   }
 
+  const deleteSingleBlogController = async(req, reply) => {
+    try {
+        
+    } catch (error) {
+        reply.code(400).send(error)
+    }
+  }
+
 export {postBlogController, getBlogsController, getSingleBlogController}
