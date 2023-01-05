@@ -22,9 +22,7 @@ export class BlogsModel {
         })
     }
 
-    static getSingleBlog = async (id: any): Promise<any> => {
-        return await blogRepo.findOneBy({
-            id
-        })
+    static getSingleBlog = async (id: any):Promise<any> => {
+        return await blogRepo.findOneBy({id})
     }
 }
