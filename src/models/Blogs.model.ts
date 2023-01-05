@@ -30,4 +30,9 @@ export class BlogsModel {
         const blogToDelete = await blogRepo.findOneBy({id})
         return await blogRepo.delete(blogToDelete.id)
     }
+
+    static putBlog = async (id: any, payload: blogInterface):Promise<any> => {
+        const blogToUpdate = await blogRepo.findOneBy({id})
+        
+    }
 }
