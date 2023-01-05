@@ -25,4 +25,9 @@ export class BlogsModel {
     static getSingleBlog = async (id: any):Promise<any> => {
         return await blogRepo.findOneBy({id})
     }
+
+    static deleteBlog = async (id: any):Promise<any> => {
+        const blogToDelete = await blogRepo.findOneBy({id})
+        return await blogRepo.delete(blogToDelete.id)
+    }
 }
